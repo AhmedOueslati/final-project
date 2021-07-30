@@ -1,0 +1,446 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* --button-scroll-to-top-- */
+.to-top {
+  background: #CACFD2;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #1f1f1f;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* -----navbar & first image background----- */
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+  url(https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-Tunisia-SidiBouSaid-760300645-1440x823.jpg);
+  background-position: center;
+  background-size: cover;
+}
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 150px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+.text-box{
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.text-box h1{
+  font-size: 62px;
+  font-weight: 600;
+  color: #FADBD8;
+}
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover{
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
+  color: black;
+}
+/* ----end of navbar---- */
+
+/* -----beachs----- */
+
+.beachs {
+  zoom: 1;
+  max-width: 1016px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 100px;
+}
+.image0{
+  width: 300px;
+  padding-top: 40px;
+  margin-left: -10px;
+}
+h1{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #641E16;
+}
+.box0{
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  margin-top: 50px;
+}
+.box0:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+h4{
+  text-align:left;
+  font-weight: 600;
+  margin: 10px 0;
+  padding-left: 10px;
+}
+p{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+.h-100:hover{
+  background-color: #EAF2F8;
+  box-shadow: 0 0 20px 0px rgba(47, 2, 247, 0.2);
+  color: #C0392B;
+}
+.card-img-top{
+  height: 12rem;
+}
+.card-body .btn {
+  float: right;
+  margin-top: -38px;
+  font-size: 15px;
+}
+
+/* -----ARCHAEOLOGICAL SITES----- */
+
+.archaeological-sites , box1{
+  width: 78%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.sites{
+  display: flex;
+  justify-content: center !important;
+}
+.photo , .left , .right{
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.photo img{
+  width: 300px;
+  height: 300px;
+}
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover{
+  background: rgb(226, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  margin-left: 14.5px;
+}
+.layer h3{
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  position:absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h3{
+  bottom: 45%;
+  opacity: 1;
+}
+
+/* ----- MUSEUMS ----- */
+
+.museums{
+  background: #fff3f3;
+  border-radius: 20px;
+  width: 80%;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.museums:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.muse{
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.museums-col{
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+.museums-col img{
+  width: 100%;
+  border-radius: 10px;
+  height: 275px;
+  width: 400px;
+}
+.museums-col h3{
+  font-size: 20px;
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* ----- SAHARA ----- */
+.sahara{
+  margin-top: 100px;
+}
+.sahara1{
+  margin: 30px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(images/sahara-tunisie.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.sahara1:hover{
+  box-shadow: 0 0 20px 0px #78281F;
+}
+.sahara1 h3{
+  color: white;
+  margin-bottom: 40px;
+  padding: 0;
+}
+.sahara1 p{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+
+
+/* ----- FOOTER ----- */
+
+footer{
+  bottom: 0px;
+  width: 100%;
+  background: #263238;
+}
+.main-content{
+  display: flex;
+  margin-top: 100px;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+.left .content .social a{
+  padding: 6px 2px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a96;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: #fff;
+}
+.left .content .social a span:hover{
+  background: #f12020;
+  color: #3498db;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: #1a1a1a9a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  color: #fff;
+}
+.center .content .fas:hover{
+  background: #f12020;
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+  color: #fff;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #263238;
+  padding-left: 10px;
+  border: 1px solid white;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn{
+  margin-top: 10px;
+}
+.right form .btn button{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 34px;
+  font-size: 15px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  margin-left: -12px;
+}
+.right form .btn button:hover{
+  background: #f12020;
+  transition: 1s;
+  color: black;
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
